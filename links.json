@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Autotool",
+    "url": "https://autotool.imn.htwk-leipzig.de/new"
+  },
+  {
+    "name": "Hardwarelabor",
+    "url": "https://hardwarelabor.imn.htwk-leipzig.de/"
+  },
+  {
+    "name": "HTWK Cloud",
+    "url": "https://cloud.imn.htwk-leipzig.de/index.php/apps/dashboard/"
+  },
+  {
+    "name": "HTWK IDM",
+    "url": "https://idm-service.htwk-leipzig.de/idmdash/#/landing"
+  },
+  {
+    "name": "HTWK Intranet",
+    "url": "https://www.htwk-leipzig.de/intern/aktuelles"
+  },
+  {
+    "name": "HTWK IT Hilfe",
+    "url": "https://itsz.htwk-leipzig.de/dienste"
+  },
+  {
+    "name": "HTWK Linktree",
+    "url": "https://links.fsr.imn.htwk-leipzig.de/"
+  },
+  {
+    "name": "HTWK Stolze",
+    "url": "https://www.imn.htwk-leipzig.de/stolze/"
+  },
+  {
+    "name": "Map",
+    "url": "https://map.htwk-leipzig.de/"
+  },
+  {
+    "name": "Modulux",
+    "url": "https://modulux.htwk-leipzig.de/app-modulux/frontend/"
+  },
+  {
+    "name": "OPAL",
+    "url": "https://bildungsportal.sachsen.de/opal/home"
+  },
+  {
+    "name": "Outlook",
+    "url": "https://groupware.htwk-leipzig.de/owa/#path=/mail"
+  },
+  {
+    "name": "penpot",
+    "url": "https://penpot.fsr.imn.htwk-leipzig.de/#/dashboard/recent?team-id=5a0e4d76-302f-80f6-8006-ed417346f82b"
+  },
+  {
+    "name": "Portal",
+    "url": "https://studium.htwk-leipzig.de/hio/pages/cs/sys/portal/hisinoneStartPage.faces"
+  },
+  {
+    "name": "QIS",
+    "url": "https://qisserver.htwk-leipzig.de/qisserver/rds?state=user&type=0&menuid=uebersicht&navigationPosition=functions%2Cuebersicht&breadcrumb=uebersicht&topitem=functions&subitem=uebersicht&startpage=portal.vm&chco=y"
+  },
+  {
+    "name": "Zulip Chat",
+    "url": "https://chat.htwk-leipzig.de/#narrow/dm/7-Welcome-Bot"
+  }
+]
