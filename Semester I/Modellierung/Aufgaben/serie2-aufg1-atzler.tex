@@ -1,0 +1,208 @@
+\documentclass[a4paper,12pt]{article}
+
+% Sprache & Zeichensätze
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{forest}
+
+% Layout
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+% Kopfzeile
+Hendrik Atzler \hfill Mtk: 88459
+
+\rule{\textwidth}{0.4pt}
+
+{\textbf{2. Übung im Modul „Modellierung“}\hfill Wintersemester 2025/26} \\
+zu lösen bis 22. Oktober 2025 \\
+\rule{\textwidth}{0.4pt}
+
+{\large{\textbf{Aufgabe 2.1}}} \\[1em]
+
+%Aufgaben------------------------------------------------------
+% -------------------------------------------------------------
+\textbf{1) } $\neg\neg p$ \\[0.3em]
+\textbf{Formel:} Ja \\
+\textbf{Begründung:} Jeder Junktor ($\neg$ ist einstellig) ist gebunden.\\
+\textbf{Variablen:} \{ $p$ \} \\
+\textbf{Teilformeln:} \{ $\neg \neg p, \neg p, p$ \} \\[0.3em]
+\begin{center}
+\begin{forest}
+for tree={inner sep=1pt, l=1cm, s sep=8pt, if n children=0{tier=leaf}{}}
+[$\neg$
+  [$\neg$
+    [$p$]
+  ]
+]
+\end{forest}
+\end{center}
+
+% -------------------------------------------------------------
+\textbf{2) } $\neg p \lor \land q$ \\[0.3em]
+\textbf{Formel:} Nein \\
+\textbf{Begründung:} $\land$ und $\lor$ sind zweistellige Junktoren.\\
+
+% -------------------------------------------------------------
+\textbf{3) } $p \implies (\neg p \lor ((\neg\neg q) \implies (p \land q)))$ \\[0.3em]
+\textbf{Formel:} Ja \\
+\textbf{Begründung:} Jeder Junktor ist gebunden.\\
+\textbf{Variablen:} \{ $p, q$ \} \\
+\textbf{Teilformeln:} \{ $p \implies (\neg p \lor ((\neg\neg q) \implies (p \land q)))$,
+$\neg p \lor ((\neg\neg q) \implies (p \land q))$,
+$\neg p$,
+$(\neg\neg q) \implies (p \land q)$,
+$\neg\neg q$,
+$\neg p$,
+$p \land q$,
+$p$,
+$q$ \} \\[0.3em]
+\begin{center}
+\begin{forest}
+for tree={inner sep=1pt, l=1.2cm, s sep=8pt, if n children=0{tier=leaf}{}}
+[$\implies$
+  [$p$]
+  [$\lor$
+    [$\neg$ [$p$]]
+    [$\implies$
+      [$\neg$ [$\neg$ [$q$]]]
+      [$\land$ [$p$] [$q$]]
+    ]
+  ]
+]
+\end{forest}
+\end{center}
+
+% -------------------------------------------------------------
+\textbf{4) } $p \implies (\neg p \lor (\neg p\neg))$ \\[0.3em]
+\textbf{Formel:} Nein \\
+\textbf{Begründung:} $\neg$ ist ein einstelliger Junktor aber ungebunden.\\
+
+% -------------------------------------------------------------
+\textbf{5) } $(p \implies q) \land (\neg r \implies (q \lor (\neg p \lor r)))$ \\[0.3em]
+\textbf{Formel:} Ja \\
+\textbf{Begründung:} Jeder Junktor ist gebunden.\\
+\textbf{Variablen:} \{ $p, q, r$ \} \\
+\textbf{Teilformeln:} \{ $(p \implies q) \land (\neg r \implies (q \lor (\neg p \lor r)))$, 
+$p \implies q$, 
+$\neg r \implies (q \lor (\neg p \lor r))$,
+$\neg r$, 
+$q \lor (\neg p \lor r)$,  
+$q$,
+$\neg p \lor r$,  
+$\neg p$, 
+$p$, 
+$r$ \} \\[0.3em]
+\begin{center}
+\begin{forest}
+for tree={inner sep=1pt, l=1.2cm, s sep=8pt, if n children=0{tier=leaf}{}}
+[$\land$
+  [$\implies$ [$p$] [$q$]]
+  [$\implies$
+    [$\neg$ [$r$]]
+    [$\lor$
+      [$q$]
+      [$\lor$ [$\neg$ [$p$]] [$r$]]
+    ]
+  ]
+]
+\end{forest}
+\end{center}
+
+% -------------------------------------------------------------
+\textbf{6) } $p \implies (((q \land \neg r) \implies q) \lor (\neg p \lor r))$ \\[0.3em]
+\textbf{Formel:} Ja \\
+\textbf{Begründung:} Jeder Junktor ist gebunden.\\
+\textbf{Variablen:} \{ $p, q, r$ \} \\
+\textbf{Teilformeln:} \{ $p \implies (((q \land \neg r) \implies q) \lor (\neg p \lor r))$, 
+$((q \land \neg r) \implies q) \lor (\neg p \lor r)$, 
+$(q \land \neg r) \implies q$,
+$q \land \neg r$,   
+$q$, 
+$\neg r$, 
+$\neg p \lor r$, 
+$\neg p$, 
+$p$,
+$r$ \} \\[0.3em]
+\begin{center}
+\begin{forest}
+for tree={inner sep=1pt, l=1.2cm, s sep=8pt, if n children=0{tier=leaf}{}}
+[$\implies$
+  [$p$]
+  [$\lor$
+    [$\implies$
+      [$\land$ [$q$] [$\neg$ [$r$]]]
+      [$q$]
+    ]
+    [$\lor$ [$\neg$ [$p$]] [$r$]]
+  ]
+]
+\end{forest}
+\end{center}
+
+% -------------------------------------------------------------
+\textbf{7) } $q\neg \land r \implies r$ \\[0.3em]
+\textbf{Formel:} Nein \\
+\textbf{Begründung:} $\neg$ ist einstelliger Junktor und $\land$ ist ein zweistelliger Junktor, bei sind zu wenig angebunden.\\
+
+% -------------------------------------------------------------
+\textbf{8) } $(\neg(\neg p \land \neg q) \lor r) \implies (p \land \neg(\neg q \lor \neg r))$ \\[0.3em]
+\textbf{Formel:} Ja \\
+\textbf{Begründung:} Jeder Junktor ist gebunden.\\
+\textbf{Variablen:} \{ $p, q, r$ \} \\
+\textbf{Teilformeln:} \{ $(\neg(\neg p \land \neg q) \lor r) \implies (p \land \neg(\neg q \lor \neg r))$, 
+$\neg(\neg p \land \neg q) \lor r$, 
+$\neg(\neg p \land \neg q)$,
+$\neg p \land \neg q)$,
+$\neg p$,
+$p \land \neg(\neg q \lor \neg r)$,
+$p$,   
+$\neg(\neg q \lor \neg r)$,
+$\neg q \lor \neg r$,  
+$\neg q$, 
+$\neg r$, 
+$q$, $r$ \} \\[0.3em]
+\begin{center}
+\begin{forest}
+for tree={inner sep=1pt, l=1.2cm, s sep=8pt, if n children=0{tier=leaf}{}}
+[$\implies$
+  [$\lor$
+    [$\neg$ [$\land$ [$\neg$ [$p$]] [$\neg$ [$q$]]]]
+    [$r$]
+  ]
+  [$\land$
+    [$p$]
+    [$\neg$ [$\lor$ [$\neg$ [$q$]] [$\neg$ [$r$]]]]
+  ]
+]
+\end{forest}
+\end{center}
+
+% -------------------------------------------------------------
+\textbf{9) } $\neg(\neg t \land \neg p) \leftrightarrow (f \implies q)$ \\[0.3em]
+\textbf{Formel:} Ja \\
+\textbf{Begründung:} Jeder Junktor ist gebunden.\\
+\textbf{Variablen:} \{ $t, p, f, q$ \} \\
+\begin{center}
+\begin{forest}
+for tree={inner sep=1pt, l=1.2cm, s sep=8pt, if n children=0{tier=leaf}{}}
+[$\leftrightarrow$
+  [$\neg$ [$\land$ [$\neg$ [$t$]] [$\neg$ [$p$]]]]
+  [$\implies$ [$f$] [$q$]]
+]
+\end{forest}
+\end{center}
+
+% -------------------------------------------------------------
+\vspace{1em}
+\textbf{Zusammenfassung:}\\
+Gültige aussagenlogische Formeln: 1, 3, 5, 6, 8, 9 \\
+Keine aussagenlogischen Formeln: 2, 4, 7
+
+\end{document}
